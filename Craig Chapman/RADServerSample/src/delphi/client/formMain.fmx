@@ -1,0 +1,312 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Employees Client'
+  ClientHeight = 399
+  ClientWidth = 665
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Panel3: TPanel
+    Align = Client
+    Size.Width = 665.000000000000000000
+    Size.Height = 327.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object lblFirstName: TLabel
+      Position.X = 160.000000000000000000
+      Position.Y = 16.000000000000000000
+      Text = 'First Name'
+    end
+    object lblLastName: TLabel
+      Position.X = 296.000000000000000000
+      Position.Y = 16.000000000000000000
+      Text = 'Last Name'
+    end
+    object lblEmployeeNumber: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Text = 'Employee Number'
+    end
+    object lblPhoneExt: TLabel
+      Position.X = 424.000000000000000000
+      Position.Y = 16.000000000000000000
+      Text = 'Phone Extension'
+    end
+    object lblHireDate: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Hire Date'
+    end
+    object lblDepartmentNumber: TLabel
+      Position.X = 160.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Department Number'
+    end
+    object lblJobCode: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 112.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Job Code'
+    end
+    object lblJobGrade: TLabel
+      Position.X = 160.000000000000000000
+      Position.Y = 112.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Job Grade'
+    end
+    object lblJobCountry: TLabel
+      Position.X = 304.000000000000000000
+      Position.Y = 112.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Job Country'
+    end
+    object lblSalary: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 160.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Salary'
+    end
+    object edFirstName: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      ReadOnly = True
+      Position.X = 160.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size, Style]
+    end
+    object edLastName: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 4
+      ReadOnly = True
+      Position.X = 296.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size, Style]
+    end
+    object edtPhoneExt: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      ReadOnly = True
+      Position.X = 424.000000000000000000
+      Position.Y = 32.000000000000000000
+      StyledSettings = [Family, Size, Style]
+    end
+    object edtJobCode: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 8
+      ReadOnly = True
+      Position.X = 16.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size, Style]
+    end
+    object edtJobGrade: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 9
+      ReadOnly = True
+      Position.X = 160.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size, Style]
+    end
+    object edtJobCountry: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 10
+      ReadOnly = True
+      Position.X = 304.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size, Style]
+    end
+    object spedEmployeeNumber: TSpinBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Cursor = crIBeam
+      Max = 10000.000000000000000000
+      ReadOnly = True
+      Position.X = 16.000000000000000000
+      Position.Y = 32.000000000000000000
+      Enabled = False
+      Size.Width = 121.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object spedDepartmentNumber: TSpinBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 7
+      Cursor = crIBeam
+      Max = 10000.000000000000000000
+      ReadOnly = True
+      Position.X = 160.000000000000000000
+      Position.Y = 80.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size, Style]
+    end
+    object dtedHireDate: TDateEdit
+      Date = 39445.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 80.000000000000000000
+      ReadOnly = True
+      Size.Width = 121.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size, Style]
+      TabOrder = 6
+    end
+    object Panel1: TPanel
+      Align = Bottom
+      Position.Y = 260.000000000000000000
+      Size.Width = 665.000000000000000000
+      Size.Height = 67.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 12
+      object btnPrev: TButton
+        Position.X = 96.000000000000000000
+        Position.Y = 8.000000000000000000
+        TabOrder = 1
+        Text = 'Prev'
+        OnClick = btnPrevClick
+      end
+      object btnNext: TButton
+        Position.X = 184.000000000000000000
+        Position.Y = 8.000000000000000000
+        TabOrder = 0
+        Text = 'Next'
+        OnClick = btnNextClick
+      end
+      object btnRead: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        TabOrder = 2
+        Text = 'Read'
+        OnClick = btnReadClick
+      end
+      object btnCreate: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 40.000000000000000000
+        TabOrder = 3
+        Text = 'Create'
+        OnClick = btnCreateClick
+      end
+      object btnCommit: TButton
+        Enabled = False
+        Position.X = 96.000000000000000000
+        Position.Y = 40.000000000000000000
+        TabOrder = 4
+        Text = 'Commit'
+        OnClick = btnCommitClick
+      end
+      object btnEdit: TButton
+        Position.X = 184.000000000000000000
+        Position.Y = 40.000000000000000000
+        TabOrder = 5
+        Text = 'Edit'
+        OnClick = btnEditClick
+      end
+      object btnUpdate: TButton
+        Enabled = False
+        Position.X = 272.000000000000000000
+        Position.Y = 40.000000000000000000
+        TabOrder = 6
+        Text = 'Update'
+        OnClick = btnUpdateClick
+      end
+      object btnDelete: TButton
+        Position.X = 360.000000000000000000
+        Position.Y = 40.000000000000000000
+        TabOrder = 7
+        Text = 'Delete'
+        OnClick = btnDeleteClick
+      end
+      object btnFirst: TButton
+        Position.X = 272.000000000000000000
+        Position.Y = 8.000000000000000000
+        TabOrder = 8
+        Text = 'First'
+        OnClick = btnFirstClick
+      end
+      object btnLast: TButton
+        Position.X = 360.000000000000000000
+        Position.Y = 9.000000000000000000
+        TabOrder = 25
+        Text = 'Last'
+        OnClick = btnLastClick
+      end
+    end
+    object spedSalary: TSpinBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 11
+      Cursor = crIBeam
+      Max = 1000000.000000000000000000
+      ValueType = Float
+      Increment = 1000.000000000000000000
+      ReadOnly = True
+      Position.X = 16.000000000000000000
+      Position.Y = 176.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size, Style]
+    end
+  end
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 327.000000000000000000
+    Size.Width = 665.000000000000000000
+    Size.Height = 72.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 20
+  end
+  object RESTClient: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'UTF-8, *;q=0.8'
+    BaseURL = 'http://127.0.0.1:8080/'
+    Params = <>
+    HandleRedirects = True
+    Left = 24
+    Top = 336
+  end
+  object RESTRequest: TRESTRequest
+    Client = RESTClient
+    Params = <>
+    Resource = 'employees'
+    Response = RESTResponse
+    SynchronizedEvents = False
+    Left = 104
+    Top = 336
+  end
+  object RESTResponse: TRESTResponse
+    ContentType = 'application/json'
+    Left = 192
+    Top = 336
+  end
+end

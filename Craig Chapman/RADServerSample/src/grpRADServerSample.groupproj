@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0EAF7684-49DD-436B-9B31-964DBFB78946}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="delphi\server\RADServerD.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="cpp\server\RADServerC.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="delphi\client\EmployeesClientD.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="cpp\client\EmployeeClientC.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="RADServerD">
+        <MSBuild Projects="delphi\server\RADServerD.dproj"/>
+    </Target>
+    <Target Name="RADServerD:Clean">
+        <MSBuild Projects="delphi\server\RADServerD.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RADServerD:Make">
+        <MSBuild Projects="delphi\server\RADServerD.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RADServerC">
+        <MSBuild Projects="cpp\server\RADServerC.cbproj"/>
+    </Target>
+    <Target Name="RADServerC:Clean">
+        <MSBuild Projects="cpp\server\RADServerC.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RADServerC:Make">
+        <MSBuild Projects="cpp\server\RADServerC.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="EmployeesClientD">
+        <MSBuild Projects="delphi\client\EmployeesClientD.dproj"/>
+    </Target>
+    <Target Name="EmployeesClientD:Clean">
+        <MSBuild Projects="delphi\client\EmployeesClientD.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EmployeesClientD:Make">
+        <MSBuild Projects="delphi\client\EmployeesClientD.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EmployeeClientC">
+        <MSBuild Projects="cpp\client\EmployeeClientC.cbproj"/>
+    </Target>
+    <Target Name="EmployeeClientC:Clean">
+        <MSBuild Projects="cpp\client\EmployeeClientC.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EmployeeClientC:Make">
+        <MSBuild Projects="cpp\client\EmployeeClientC.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="RADServerD;RADServerC;EmployeesClientD;EmployeeClientC"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="RADServerD:Clean;RADServerC:Clean;EmployeesClientD:Clean;EmployeeClientC:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="RADServerD:Make;RADServerC:Make;EmployeesClientD:Make;EmployeeClientC:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
